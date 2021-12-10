@@ -24,4 +24,18 @@ public class DayOneTest
                 )
         );
     }
+
+    /**
+     * Example generalized for any depth.
+     * Depth of 1 is equal to test dayOneTestPartOne -> comparing single measurements
+     * Each higher number extends range of the measurement sums.
+     */
+    @Test
+    public void dayOneTestPartTwoOverExtended() {
+        System.out.println(
+                DayOne.depthIncreaseCounterOverExtended(
+                        Objects.requireNonNull(DayOne.getMeasurements(INPUT_DATA_PATH)), 1
+                )
+        );
+    }
 }

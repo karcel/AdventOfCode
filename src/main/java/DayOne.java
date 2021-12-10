@@ -43,9 +43,23 @@ public class DayOne
                 .count();
     }
 
+    public static int depthIncreaseCounterOverExtended(List<Integer> measurements, Integer depth)
+    {
+        return (int) IntStream.range(depth+1, measurements.size()+1)
+                .filter(i ->
+                        sum(measurements.subList(i-depth, i))
+                                > sum(measurements.subList(i-depth-1, i-1)))
+                .count();
+    }
+
     public static Integer sum(Integer... numbers)
     {
         return Arrays.stream(numbers).mapToInt(number -> number).sum();
+    }
+
+    public static Integer sum(List<Integer> numbers)
+    {
+        return numbers.stream().mapToInt(number -> number).sum();
     }
 
 }
