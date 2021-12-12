@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class DayOneTest
 {
-    private static final String TEST_DATA_PATH = "src/main/resources/test.txt";
-    private static final String INPUT_DATA_PATH = "src/main/resources/input.txt";
+    private static final String TEST_DATA_PATH = "src/main/resources/dayOne/test.txt";
+    private static final String INPUT_DATA_PATH = "src/main/resources/dayOne/input.txt";
 
     @Test
     public void dayOneTestPartOne() {
@@ -34,7 +34,7 @@ public class DayOneTest
     public void dayOneTestPartTwoOverExtended() {
         System.out.println(
                 DayOne.depthIncreaseCounterOverExtended(
-                        Objects.requireNonNull(DayOne.getMeasurements(INPUT_DATA_PATH)), 1
+                        Objects.requireNonNull(DayOne.getMeasurements(INPUT_DATA_PATH)), 3
                 )
         );
     }
