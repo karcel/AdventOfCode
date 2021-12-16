@@ -9,8 +9,6 @@ public class DayThreeTest
     public void dayTwoTestPartOne()
     {
         DayThree dayThree = new DayThree(INPUT_DATA_PATH);
-        dayThree.calculatePositionSums();
-        System.out.println("Total power consumption of the submarine is "
-                + dayThree.getPowerConsumption(dayThree.provideRates()));
+        System.out.println("Total power consumption of the submarine is " + dayThree.getPowerConsumption());
     }
 }

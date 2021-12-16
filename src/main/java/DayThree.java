@@ -70,8 +70,12 @@ public class DayThree
         return Integer.parseInt(valueBits, 2);
     }
 
-    public Integer getPowerConsumption(Pair<Integer, Integer> rates)
+    public Integer getPowerConsumption()
     {
+        calculatePositionSums();
+
+        Pair<Integer, Integer> rates = provideRates();
+
         return rates.first() * rates.second();
     }
 
