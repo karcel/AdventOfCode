@@ -15,20 +15,13 @@ public class DayThree
 
     public DayThree(String filePath)
     {
-        measurements = getMeasurements(filePath);
-        assert measurements != null;
+        try {
+            measurements = readAllLines(Paths.get(filePath));
+        } catch (IOException e) {
+            throw new RuntimeException("Unable to read input data!!!\n" + e);
+        }
 
         System.out.println("Measurements provided:\n" + measurements);
-    }
-
-    private List<String> getMeasurements(String filePath)
-    {
-        try {
-            return readAllLines(Paths.get(filePath));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     public Integer[] calculatePositionSums(List<String> values)
